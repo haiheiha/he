@@ -47,16 +47,24 @@
                     </div>
                 </div>
                 <div id="clock-box">
-                    <a href="http://www.airt.tech" target="_blank">艾伦</a> 与 <a href="http://www.airt.tech" target="_blank">三笠</a> 在一起的
+                    <a href="http://www.airt.tech" target="_blank">你</a> 与 <a href="http://www.airt.tech" target="_blank">我</a> 在一起的
                         <div id="clock"></div>
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
-            </div>
-            <audio src="love.mp3" autoplay="autoplay"></audio>
-        </div>
-    
-    <script>
-    </script>
+   <audio id="wwmusic" src="love.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+    <script type="text/javascript">
+  function toggleSound() {
+            var music = document.getElementById("wwmusic");//获取ID
+                console.log(music);
+                console.log(music.paused);
+            if (music.paused) { //判读是否播放
+                music.paused=false;
+                music.play(); //没有就播放
+            }
+
+        }
+setInterval("toggleSound()",1);
+</script>
 
     <script>
     (function(){
